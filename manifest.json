@@ -2,7 +2,7 @@
   "name": "O Impostor",
   "short_name": "Impostor",
   "description": "Jogo estilo Among Us para festas",
-  "start_url": "jogo.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#090a0f",
   "theme_color": "#00ffff",
@@ -20,3 +20,4 @@
     }
   ]
 }
+
