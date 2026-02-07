@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1b2735, #090a0f);
+  color: white;
+}
+
+/* esconder de verdade */
+.hidden {
+  display: none !important;
+}
+
+/* menu */
+#menu {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* tela do jogo */
+.tela {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* card flutuante */
+.card {
+  background: rgba(0,0,0,0.75);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 340px;
+  box-shadow: 0 0 30px rgba(0,255,255,0.25);
+}
+
+/* textos */
+h1 {
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+#tituloJogador {
+  font-size: 26px;
+  color: #00ffcc;
+  margin-bottom: 20px;
+}
+
+#mensagem {
+  font-size: 20px;
+  margin-bottom: 20px;
+
+  /* NÃO quebrar palavras no meio */
+  word-break: keep-all;
+  overflow-wrap: normal;
+
+  /* respeita quebra de linha sem bagunçar */
+  white-space: pre-wrap;
+}
+
+
+/* inputs */
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+
+  border-radius: 18px;
+  border: 2px solid transparent;
+
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(90deg, #00ffff, #ff00ff, #00ffff) border-box;
+
+  animation: neonInput 3s linear infinite;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  outline: none;
+}
+
+/* botões estilo emergency */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ff4040;
+  color: white;
+  box-shadow: 0 6px #b52b2b;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px #b52b2b;
+}
+
+/* votação */
+#timer {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #00ffff;
+}
+@keyframes neonInput {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+input:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+}
+.botao-azul {
+  background: #00aaff;
+  box-shadow: 0 6px #0077aa;
+  color: white;
+}
+
+.botao-azul:active {
+  box-shadow: 0 2px #0077aa;
+}

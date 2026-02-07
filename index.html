@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo do Impostor</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 👇 MANIFEST -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00ffff">
+</head>
+
+<body>
+
+<div id="menu">
+  <div class="card">
+    <h1>🎭 O Impostor</h1>
+
+    <input type="number" id="numJogadores" placeholder="Jogadores (mín. 3)" min="3">
+    <input type="number" id="tempoInput" placeholder="Tempo da votação (segundos)" min="10">
+
+    <button onclick="iniciar()">Iniciar jogo</button>
+  </div>
+</div>
+
+<div id="telaJogador" class="hidden tela" onclick="clicarTela()">
+  <div class="card">
+    <h2 id="tituloJogador"></h2>
+    <p id="mensagem"></p>
+
+    <div id="areaVotacao" class="hidden">
+      <p id="timer"></p>
+      <button id="botaoVotacao" onclick="acaoBotao()">Mais uma rodada</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
+
+
+</body>
+</html>
